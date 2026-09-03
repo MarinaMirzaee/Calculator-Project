@@ -19,74 +19,66 @@
         <a href="calculator.html" class="active">Calculator</a>
         <a href="quote.html">Quote</a>
 
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+
     </nav>
 
 </header>
 
 <!-- Calculator Section-->
 
- <main class="calculator-page">
+<section class="calculator-page">
 
-    <!-- Lift Side -->
-     <section class="calculator-title">
-
-        <h1> Lets Do Some Math... </h1>
-        
-     </section>
-
-     <!-- Calculator -->
-
-     <section class="calculator">
-        
-        <!-- Display -->
-         <div class="display" id="display">0</div>
-
-         <!-- Buttons -->
-          <div class="buttons">
-
-            <!-- First Row -->
-
-             
-             <button id="delet">✕</button>
-             <button onclick="clearDisplay()"> AC </button>
-             <button onclick="percentage">%</button>
-             <button class="operator">/</button>
+  <!-- Title -->
+  <div class="calculator-title">
+    <h1>Lets Do Some Math... </h1>
+  </div>
 
 
-             <!-- Second Row -->
-              
-             <button class="number">7</button>
-             <button class="number">8</button>
-             <button class="number">9</button>
-             <button class="operator">×</button>
+  <!-- Calculator -->
+  <section class="calculator">
 
-             <!-- Third Row -->
+    <!-- Display -->
+    <div class="display" id="display">0</div>
 
-            <button class="number">4</button>
-            <button class="number">5</button>
-            <button class="number">6</button>
-            <button class="operator">-</button>
 
-            <!-- Fourth Row  -->
+    <!-- Buttons -->
+    <div class="buttons">
 
-            <button class="number">1</button>
-            <button class="number">2</button>
-            <button class="number">3</button>
-            <button class="operator">+</button>
+      <!-- First Row -->
+     <button id="delet" class="special">⌫</button>
+<button id="del-All" class="special">AC</button>
+<button id="percentage" class="special" data-value="%">%</button>
+<button class="operator" data-value="/">÷</button>
 
-            <!-- Last Row -->
+<button class="number" data-value="7">7</button>
+<button class="number" data-value="8">8</button>
+<button class="number" data-value="9">9</button>
+<button class="operator" data-value="*">×</button>
 
-            <button class="zero">0</button>
-            <button class="point">.</button>
-            <button class="operator">=</button>
+<button class="number" data-value="4">4</button>
+<button class="number" data-value="5">5</button>
+<button class="number" data-value="6">6</button>
+<button class="operator" data-value="-">−</button>
 
-          </div>
-     </section>
+<button class="number" data-value="1">1</button>
+<button class="number" data-value="2">2</button>
+<button class="number" data-value="3">3</button>
+<button class="operator" data-value="+">+</button>
 
- </main>
+<button class="zero number" data-value="0">0</button>
+<button class="point" data-value=".">.</button>
+<button class="equal">=</button>
+
+    </div>
+
+  </section>
+
+</section>
+
 
 <!-- Javascript -->
- <script src="main.js"></script>
+ <script src="JS/script.js"></script>
     
 </body>
 </html>
