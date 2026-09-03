@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+<header class="navbar">
+    <a href="index.html" class="logo">Math Magician</a>
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="calculator.html" class="active">Calculator</a>
+        <a href="quote.html">Quote</a>
+
+    </nav>
+
+</header>
+
+<!-- Calculator Section-->
+
+ <main class="calculator-page">
+
+    <!-- Lift Side -->
+     <section class="calculator-title">
+
+        <h1> Lets Do Some Math... </h1>
+        
+     </section>
+
+     <!-- Calculator -->
+
+     <section class="calculator">
+        
+        <!-- Display -->
+         <div class="display" id="display">0</div>
+
+         <!-- Buttons -->
+          <div class="buttons">
+
+            <!-- First Row -->
+
+             
+             <button id="delet">✕</button>
+             <button onclick="clearDisplay()"> AC </button>
+             <button onclick="percentage">%</button>
+             <button class="operator">/</button>
+
+
+             <!-- Second Row -->
+              
+             <button class="number">7</button>
+             <button class="number">8</button>
+             <button class="number">9</button>
+             <button class="operator">×</button>
+
+             <!-- Third Row -->
+
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="operator">-</button>
+
+            <!-- Fourth Row  -->
+
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="operator">+</button>
+
+            <!-- Last Row -->
+
+            <button class="zero">0</button>
+            <button class="point">.</button>
+            <button class="operator">=</button>
+
+          </div>
+     </section>
+
+ </main>
+
+<!-- Javascript -->
+ <script src="main.js"></script>
+    
+</body>
+</html>

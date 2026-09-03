@@ -1,0 +1,475 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: -o-linear-gradient(135deg,#eef2f5,#ffffff,#e9edf0);
+    color: #111;
+}
+
+/* Navbar */
+.navbar {
+    width: calc(100% - 12px);
+    height: 60px;
+    margin: 8px 6px 0;
+    padding: 0 6%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+    
+}
+
+/* Logo */
+.logo{
+    text-decoration: none;
+    color:#d8893e;
+    font-size: 31px;
+    font-weight: bold;
+}
+
+/* Navigation */
+.navbar nav {
+    display: flex;
+    gap: 38px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color:#777;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.navbar nav a:hover {
+    color:#d8893e;
+}
+
+.navbar nav a.activen{
+    color:#d8893e;
+
+}
+
+/* Home */
+.home {
+    min-height: calc(100vh - 68px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 9%;
+}
+
+.info-card {
+    width: 100%;
+    max-width: 1250px;
+    min-height: 320px;
+    padding: 60px 40px;
+    border-radius: 12px;
+    border: 1px solid #aaa;
+    background: rgba(255,255,255,0.65);
+    box-shadow:8px 12px 14px rgba(0,0,0,0.25);
+       
+}
+
+
+.info-card h1 {
+    font-size: 30px;
+    margin-bottom: 35px;
+
+}
+
+
+.info-card p {
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 600;
+
+}
+
+
+   /* Calculator Page */
+
+
+.calculator-page {
+    min-height: calc(100vh - 68px);
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1fr 470px;
+    gap: 70px;
+
+}
+.calculator-title h1 {
+    color: #d8893e;
+    font-size: 38px;
+
+}
+
+/* =========================
+   Calculator Page
+========================= */
+
+.calculator-page {
+    min-height: calc(100vh - 68px);
+    padding: 80px 8%;
+
+    display: grid;
+    grid-template-columns: 1fr 470px;
+    align-items: center;
+    gap: 70px;
+}
+
+
+/* =========================
+   Title
+========================= */
+
+.calculator-title h1 {
+    color: #d8893e;
+    font-size: clamp(32px, 4vw, 60px);
+}
+
+
+/* =========================
+   Calculator
+========================= */
+
+.calculator {
+    width: 100%;
+    max-width: 470px;
+    min-height: 720px;
+
+    background: #000;
+    border-radius: 45px;
+
+    padding: 25px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   Display
+========================= */
+
+.display {
+    width: 100%;
+    height: 180px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    color: #fff;
+    font-size: clamp(50px, 5vw, 75px);
+    font-weight: 300;
+
+    padding: 0 15px 15px;
+
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   Buttons Container
+========================= */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+
+/* =========================
+   All Buttons
+========================= */
+
+button {
+    border: none;
+    outline: none;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+
+    background: #333;
+    color: white;
+
+    font-size: clamp(24px, 2vw, 32px);
+    font-weight: 400;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: filter 0.1s ease,
+                transform 0.05s ease;
+}
+
+
+/* =========================
+   Press Effect
+========================= */
+
+button:active {
+    filter: brightness(1.5);
+    transform: scale(0.96);
+}
+
+
+/* =========================
+   AC, +/-, %
+========================= */
+
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(3) {
+    background: #a5a5a5;
+    color: #000;
+}
+
+
+/* =========================
+   Operators
+========================= */
+
+button.operator {
+    background: #ff9500;
+    color: #fff;
+}
+
+
+/* =========================
+   Zero Button
+========================= */
+
+button.zero {
+    grid-column: span 2;
+
+    aspect-ratio: auto;
+
+    border-radius: 50px;
+
+    justify-content: flex-start;
+
+    padding-left: 32px;
+}
+
+
+/* ===================================
+   Large Laptop / Desktop
+=================================== */
+
+@media (min-width: 1400px) {
+
+    .calculator-page {
+        grid-template-columns: 1fr 520px;
+        padding: 100px 10%;
+        gap: 100px;
+    }
+
+    .calculator {
+        max-width: 520px;
+        min-height: 780px;
+    }
+
+    .calculator-title h1 {
+        font-size: 65px;
+    }
+
+}
+
+
+/* ===================================
+   Laptop / Tablet
+=================================== */
+
+@media (max-width: 1100px) {
+
+    .calculator-page {
+        grid-template-columns: 1fr 420px;
+        gap: 40px;
+
+        padding: 60px 6%;
+    }
+
+    .calculator {
+        max-width: 420px;
+        min-height: 680px;
+    }
+
+}
+
+
+/* ===================================
+   Tablet
+=================================== */
+
+@media (max-width: 850px) {
+
+    .calculator-page {
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+
+        gap: 40px;
+
+        padding: 60px 5%;
+    }
+
+    .calculator-title {
+        text-align: center;
+    }
+
+    .calculator {
+        max-width: 450px;
+        width: 100%;
+    }
+
+}
+
+
+/* ===================================
+   Mobile
+=================================== */
+
+@media (max-width: 600px) {
+
+    .calculator-page {
+        min-height: auto;
+
+        padding: 30px 15px 40px;
+
+        gap: 25px;
+    }
+
+    .calculator-title h1 {
+        font-size: 32px;
+    }
+
+    .calculator {
+        max-width: 380px;
+
+        min-height: auto;
+
+        border-radius: 30px;
+
+        padding: 20px 15px;
+    }
+
+    .display {
+        height: 140px;
+
+        font-size: 60px;
+
+        padding: 0 10px 15px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    button {
+        font-size: 26px;
+    }
+
+    button.zero {
+        padding-left: 25px;
+    }
+
+}
+
+
+/* ===================================
+   Small Mobile
+=================================== */
+
+@media (max-width: 430px) {
+
+    .calculator-page {
+        padding: 20px 12px 30px;
+    }
+
+    .calculator {
+        border-radius: 25px;
+
+        padding: 18px 12px;
+    }
+
+    .display {
+        height: 120px;
+
+        font-size: 52px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    button {
+        font-size: 24px;
+    }
+
+    button.zero {
+        padding-left: 22px;
+    }
+
+}
+
+
+/* ===================================
+   Very Small Phones
+=================================== */
+
+@media (max-width: 350px) {
+
+    .calculator-page {
+        padding: 15px 8px;
+    }
+
+    .calculator-title h1 {
+        font-size: 28px;
+    }
+
+    .calculator {
+        padding: 15px 10px;
+
+        border-radius: 20px;
+    }
+
+    .display {
+        height: 100px;
+
+        font-size: 42px;
+    }
+
+    .buttons {
+        gap: 6px;
+    }
+
+    button {
+        font-size: 20px;
+    }
+
+    button.zero {
+        padding-left: 18px;
+    }
+
+}
