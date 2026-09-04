@@ -19,6 +19,7 @@
             <a href="index.html">Home</a>
             <a href="calculator.html">Calculator</a>
             <a href="quote.html" class="active">Quote</a>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
 
         </nav>
      </header>
@@ -34,6 +35,37 @@
         </section>
 
       </main>
+
+      <!-- Javascript -->
+       <script>
+        // Light and dark mode Codes 
+document.addEventListener('DOMContentLoaded', () => {
+
+  const toggleBtn = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Load saved theme on page load
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    body.classList.add('light-mode');
+    toggleBtn.textContent = '☀️';
+  }
+
+  // Toggle on click
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+
+    if (body.classList.contains('light-mode')) {
+      toggleBtn.textContent = '☀️';
+      localStorage.setItem('theme', 'light');
+    } else {
+      toggleBtn.textContent = '🌙';
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+
+});
+       </script>
 
 </body>
 </html>
